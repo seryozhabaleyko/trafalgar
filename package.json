@@ -1,0 +1,32 @@
+{
+  "name": "trafalgar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify-es": "^2.0.0",
+    "node-sass": "^4.14.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seryozhabaleyko/trafalgar.git"
+  },
+  "keywords": [],
+  "author": "seryozha baleyko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seryozhabaleyko/trafalgar/issues"
+  },
+  "homepage": "https://github.com/seryozhabaleyko/trafalgar#readme"
+}
