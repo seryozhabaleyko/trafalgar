@@ -1,5 +1,31 @@
-body {
-    margin: 0;
-    font-size: 1rem;
-    display: grid;
+@import "normalize";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+body {
+    font-family: 'Mulish', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+@import "container";
+@import "buttons";
+@import "nav";
+@import "navbar";
+@import "brand";
+
+@import "cover";
+@import "services";
+@import "apps";
+@import "footer";
