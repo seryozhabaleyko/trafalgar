@@ -5,6 +5,9 @@ const uglify = require('gulp-uglify-es').default;
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
+const newer = require('gulp-newer');
+const imagemin = require('gulp-imagemin');
+const del = require('del');
 
 sass.compiler = require('node-sass');
 
@@ -39,6 +42,17 @@ function javascript() {
         .pipe(browserSync.stream());
 }
 
+function images() {
+    return src('src/images/**/*')
+        .pipe(newer('build/images'))
+        .pipe(imagemin())
+        .pipe(dest('build/images'));
+}
+
+function cleanImages() {
+    return del('build/images/**/*', { force: true });
+}
+
 function browsersync() {
     browserSync.init({
         server: {
@@ -55,11 +69,14 @@ function startWatch() {
     watch('src/js/**/*.js', javascript);
 }
 
+exports.html = html;
 exports.css = css;
 exports.javascript = javascript;
+exports.images = images;
+exports.cleanImages = cleanImages;
 exports.browsersync = browsersync;
 
 exports.dev = series(
     clean,
-    parallel(html, css, javascript, browsersync, startWatch),
+    parallel(html, css, javascript, images, browsersync, startWatch),
 );
