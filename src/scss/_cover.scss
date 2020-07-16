@@ -1,0 +1,39 @@
+.cover {
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        padding-right: 130px;
+
+        > h1 {
+            margin: 0 0 25px 0;
+
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 56px;
+
+            color: #000000;
+        }
+
+        > p {
+            margin: 0 0 45px 0;
+
+            font-weight: 300;
+            font-size: 21px;
+            line-height: 32px;
+
+            color: #7D7987;
+        }
+    }
+
+    &-right {
+
+    }
+}
