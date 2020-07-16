@@ -1,0 +1,18 @@
+.footer {
+    position: relative;
+    padding: 120px;
+    background: linear-gradient(180.92deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+
+    &-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+
+    &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: '';
+        background-image: url('../images/footer/element.png');
+    }
+}
