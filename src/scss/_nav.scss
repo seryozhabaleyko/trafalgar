@@ -1,0 +1,34 @@
+.nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    &-item {
+        margin-right: 40px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &-link {
+        font-size: 18px;
+        line-height: 23px;
+
+        color: #1F1534;
+        opacity: 0.5;
+
+        transition: all 0.3s ease 0s;
+
+        &:active, &.active {
+            opacity: 1;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
