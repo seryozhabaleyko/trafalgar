@@ -64,9 +64,10 @@ function browsersync() {
 }
 
 function startWatch() {
-    watch('src/*.html', html).on('change', browserSync.reload);
+    watch('src/*.html').on('change', browserSync.reload);
     watch('src/scss/**/*.scss', css);
     watch('src/js/**/*.js', javascript);
+    watch('src/images/**/*', images);
 }
 
 exports.html = html;
@@ -78,5 +79,5 @@ exports.browsersync = browsersync;
 
 exports.dev = series(
     clean,
-    parallel(html, css, javascript, images, browsersync, startWatch),
+    parallel(html, css, javascript, browsersync, startWatch),
 );
